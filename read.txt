@@ -8,15 +8,15 @@ The Spring Boot File Upload Rest Service
 3)	By using GET call we can get the uploaded file metadata.
 
 How to test the Rest- API
-1)	Using the Single file upload:  http://localhost/8080/fileupload
+1)	Using the Single file upload:  http://localhost/8080/fileUpload
 In Postman by using the method has POST and selecting the body as form data, chose the file from the system. Eg: c://desktop//users//test.txt.
 
 Output for the above rest call: It gives the message as File_Name uploaded Successfully. Uploaded folder path is hard coded in FileUploadController.java. 
 These paths has to be changed according to the system. The uploaded file will present in that folder.
 
-2)	Using the GET call: http://localhost/8080/getfilemetadata
+2)	Using the GET call: http://localhost/8080/getFileMetaData
 In postman by using the method as GET and select the body as raw, send the request. We will get the metadata response in JSON format.
-Eg: Request: GET http://localhost:8080/getUploadfileMetadata
+Eg: Request: GET http://localhost:8080/getFileMetaData
       Response: GET [{ "name": "testFile1.txt", "contentType": "text/plain", "contentSize": 28}, { "name": "testFile2.txt", "contentType": "text/plain", "contentSize": 25 }] 
 
 •	If this spring boot application run for second time please uncomment the drop statement in schema.sql. So that for the second time the already existed table will be dropped and creates new table in h2 database. 
